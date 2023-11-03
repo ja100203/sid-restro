@@ -1,0 +1,100 @@
+.container {
+  scroll-behavior: smooth;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-image: white
+  }
+  
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(61, 61, 61, 0.3);
+    width: 400px;
+    height: 100%;
+    background-color: #f66161;
+    padding: 10px 30px;
+    color: white;
+  }
+  .card-img img{
+    padding: 4rem;
+    width: 400px;
+    height: 400px;
+  }
+  .card_title {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .card_title h1 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .form input {
+    margin: 10px 0;
+    width: 90%;
+    background-color: #e2e2e2;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+  }
+  
+  .form button {
+    background-color: white;
+    color: #ee0909;
+    font-size: 1.5rem;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 15px;
+    width: 100%;
+  }
+  
+  .card_terms {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .card_terms input[type="checkbox"] {
+    background-color: #e2e2e2;
+  }
+  
+  .card_terms span {
+    margin: 5px;
+    font-size: 13px;
+  }
+  
+  .card a {
+    color: rgb(251, 245, 245);
+    text-decoration: none;
+  }
+  @media screen and (max-width:768px){
+.card-img img{
+  width: 250px;
+  height: 250px;
+}
+.card{
+  width: 300px;
+  height: 100%;
+}
+  }
+  @media screen and (max-width:500px){
+    .container{
+      display: flex;
+      flex-direction: column;
+    }
+    .card-img img{
+      width: 300px;
+      height: 250px;
+    }
+    .card{
+      width: 300px;
+      height: 100%;
+    }
+      }
+      
+  
+  

@@ -1,0 +1,41 @@
+.bg-form-bk{
+    min-height: 100vh;
+    background-image: url("../../assets//images/pat__-KveL_hxuY0Q-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ .bookHead{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+ }
+ .form-container{
+    backdrop-filter: blur(5px);
+    background-color: #00000053;
+    color: white;
+    padding: 3rem;
+    font-size: 1.2rem;
+ }
+ #bookBtn{
+    width: 12rem;;
+    height: 3rem;
+    background-color: rgb(212, 10, 10);
+    font-size: 1.5rem;
+    border-radius: 15px;
+    border-style: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+ }
+ #bookBtn:hover{
+    cursor: pointer;
+ }
