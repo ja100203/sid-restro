@@ -11,8 +11,10 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://nice-lime-giraffe-coat.cyclic.app/api/loginuser", {
-      mode: 'cors',
+    // const response = await fetch("https://nice-lime-giraffe-coat.cyclic.app/api/loginuser", {
+      const response = await fetch("https://proud-pike-fez.cyclic.app/api/loginuser", {
+      // mode: 'no-cors',
+      // cache: 'no-cache',
 
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
@@ -23,6 +25,7 @@ function Login() {
       body: JSON.stringify({ email: credentials.email, password: credentials.password })
 
     });
+    console.log(response);
     const json = await response.json()
     console.log(json);
     if (json.success) {

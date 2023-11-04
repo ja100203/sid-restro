@@ -10,22 +10,23 @@ const navigate=useNavigate();
 
 const handleSubmit = async (e) => {
   e.preventDefault();
+  const creds= {
+    username: credentials.username,
+    email: credentials.email,
+    password: credentials.password
+  }
+  console.log(creds);
 
   try {
-    const response = await fetch("https://nice-lime-giraffe-coat.cyclic.app/api/createuser", {
-      mode: 'no-cors',
-      cache: 'no-cache',
-
+    // const response = await fetch("https://nice-lime-giraffe-coat.cyclic.app/api/createuser", {
+      const response = await fetch("https://proud-pike-fez.cyclic.app/api/createuser", {
+      // mode: 'no-cors',
 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        username: credentials.username,
-        email: credentials.email,
-        password: credentials.password,
-      })
+      body: JSON.stringify(creds)
     });
 
     if (response.ok) {
@@ -77,4 +78,3 @@ const handleSubmit = async (e) => {
 }
 
 export default Signup
-
