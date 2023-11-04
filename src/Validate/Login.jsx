@@ -11,7 +11,9 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:3500/api/loginuser", {
+    const response = await fetch("https://nice-lime-giraffe-coat.cyclic.app/api/loginuser", {
+      mode: 'cors',
+
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',

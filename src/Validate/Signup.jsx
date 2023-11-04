@@ -12,7 +12,11 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   try {
-    const response = await fetch("http://localhost:3500/api/createuser", {
+    const response = await fetch("https://nice-lime-giraffe-coat.cyclic.app/api/createuser", {
+      mode: 'no-cors',
+      cache: 'no-cache',
+
+
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -34,7 +38,7 @@ const handleSubmit = async (e) => {
         alert("Registration failed. Please check your credentials.");
       }
     } else {
-      console.error(`HTTP error: ${response.status}`);
+      console.log(`HTTP error: ${response.status}`);
       alert("Failed to register. Please try again later.");
     }
   } catch (error) {
