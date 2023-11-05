@@ -15,13 +15,20 @@ router.post("/createuser",[
     body('password','incorrect password').isLength({min:5})],
     
     async (req, res) => {
+      res.set({
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      });
+      console.log("body ", req.body);
+      console.log("hehe");
     const errors=validationResult(req);
+    console.log("hihi");
     if(!errors.isEmpty()){
         return res.status(400).send({errors:errors.array()})
     }
-    
+    console.log("haha");
     const salt=await bcrypt.genSalt(10);
-    let secPassword=await bcrypt.hash(req.body.password,salt)
+    const secPassword=await bcrypt.hash(req.body.password,salt)
     
         try{
         await Register.create({
@@ -37,8 +44,12 @@ router.post("/createuser",[
 
 
     router.post("/loginuser", async (req, res) => {
+      res.set({
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      });
         const { email, password } = req.body;
-      
+      console.log("blah blah");
         try {
           const userData = await Register.findOne({ email });
       
@@ -69,4 +80,5 @@ router.post("/createuser",[
       
 
     module.exports=router;
+    
     
